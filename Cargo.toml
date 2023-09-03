@@ -1,0 +1,14 @@
+[package]
+name = "http-from-scratch"
+version = "0.1.0"
+edition = "2021"
+authors = ["Abdeldjalil Chougui"]
+license = "MIT"
+description = "HTTP/1.1 server from scratch: shared parser, std thread-pool server and a Tokio server"
+
+[[bin]]
+name = "hfs"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "net", "io-util", "macros", "time"] }
